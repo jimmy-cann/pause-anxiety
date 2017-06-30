@@ -85,11 +85,6 @@ const RightSectionMobile = styled.div`
   `}
 `
 
-const JimmyImg = styled.img`
-  width: 40px;
-  padding-top: 15px;
-`
-
 class TopMenu extends Component {
   constructor() {
     super()

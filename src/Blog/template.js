@@ -34,9 +34,9 @@ const Container = styled.div`
 `
 
 const meta = {
-  title: 'Blog - Jimmy Cann - Full Stack Developer',
+  title: 'Blog - Pause Anxiety',
   description: 'Dev Blog - Obligatory repository of code ideas and guides',
-  url: 'https://jimmycann.com/blog'
+  url: 'https://pause-anxiety.com/blog'
 }
 
 class Blog extends Component {

@@ -1,8 +1,8 @@
 {
-  "name": "jimmycann",
+  "name": "pause-anxiety",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yjimk.github.io/jimmycann",
+  "homepage": "https://yjimk.github.io/pause-anxiety",
   "devDependencies": {
     "autoprefixer": "7.1.1",
     "babel-core": "6.25.0",

@@ -44,19 +44,19 @@ class BlogPage extends Component {
     return (
       <Wrapper>
         <Helmet
-            title={blog.title + ' - Jimmy Cann - Full Stack Developer'}
+            title={blog.title + ' - Pause Anxiety'}
             meta={[
               {'name': 'description', 'content': blog.subhead},
               {'property': 'og:type', 'content': 'article'},
-              {'property': 'og:title', 'content': blog.title + ' - Jimmy Cann - Full Stack Developer'},
+              {'property': 'og:title', 'content': blog.title + ' - Pause Anxiety'},
               {'property': 'og:description', 'content': blog.subhead},
               {'property': 'og:image', 'content': blog.image || '/img/blog.png'},
-              {'property': 'og:url', 'content': 'https://jimmycann.com/' + postRoute},
+              {'property': 'og:url', 'content': 'https://pause-anxiety.com/' + postRoute},
               {'property': 'twitter:card', 'content': 'article'},
-              {'property': 'twitter:title', 'content': blog.title + ' | Jimmy Cann - Full Stack Developer'},
+              {'property': 'twitter:title', 'content': blog.title + ' | Pause Anxiety'},
               {'property': 'twitter:description', 'content': blog.subhead},
               {'property': 'twitter:image', 'content': blog.image || '/img/blog.png'},
-              {'property': 'twitter:url', 'content': 'https://jimmycann.com/' + postRoute}
+              {'property': 'twitter:url', 'content': 'https://pause-anxiety.com/' + postRoute}
             ]}
         />
         <TopSection bgImg={tsProps.bgImg}

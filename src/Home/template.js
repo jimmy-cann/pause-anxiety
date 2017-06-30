@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet';
 
-import bgImg from './home.png'
 import TopSection from '../TopSection/template'
 
 import ThreePointCta from '../ThreePointCta/template'
@@ -21,7 +20,7 @@ const meta = {
 }
 
 const tsProps = {
-  bgImg: bgImg,
+  // bgImg: bgImg,
   header: 'Pause Anxiety',
   logo: true,
   button: false,
@@ -39,12 +38,12 @@ class Home extends Component {
               {'property': 'og:type', 'content': 'article'},
               {'property': 'og:title', 'content': meta.title},
               {'property': 'og:description', 'content': meta.description},
-              {'property': 'og:image', 'content': bgImg},
+              // {'property': 'og:image', 'content': bgImg},
               {'property': 'og:url', 'content': meta.url},
               {'property': 'twitter:card', 'content': 'article'},
               {'property': 'twitter:title', 'content': meta.title},
               {'property': 'twitter:description', 'content': meta.description},
-              {'property': 'twitter:image', 'content': bgImg},
+              // {'property': 'twitter:image', 'content': bgImg},
               {'property': 'twitter:url', 'content': meta.url}
             ]}/>
         <TopSection bgImg={tsProps.bgImg}

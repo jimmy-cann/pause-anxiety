@@ -47,7 +47,7 @@ class DarkFooter extends Component {
       <Wrapper>
         <Container>
           <div>
-            <p>&copy; {d} <a href="https://jimmycann.com">Jimmy Cann</a>. Code&nbsp;samples&nbsp;licensed&nbsp;under&nbsp;<a href="https://opensource.org/licenses/mit-license.php">MIT</a></p>
+            <p>&copy; {d} <a href="https://pause-anxiety.com">Pause Anxiety</a>. Code&nbsp;samples&nbsp;licensed&nbsp;under&nbsp;<a href="https://opensource.org/licenses/mit-license.php">MIT</a></p>
           </div>
           <SocialButtons></SocialButtons>
         </Container>
