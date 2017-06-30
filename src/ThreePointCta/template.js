@@ -25,12 +25,16 @@ const Container = styled.div`
 
 const Point = styled.div`
   width: 100%;
-  text-align: center;
+  text-align: left;
   padding: 0 0 20px;
   ${media.gtxs`
     padding: 0 40px 10px;
+    max-width: 50%;
   `}
-  > h4 {
+  ${media.gtsm`
+    max-width: 30%;
+  `}
+  > h2 {
     margin: 10px 0;
   }
   > p {
@@ -52,19 +56,9 @@ class ThreePointCta extends Component {
       <Wrapper>
         <Container>
           <Point>
-          <img src={web} alt="web" />
-            <h4>Frontend</h4>
-            <p>Extensive use of AngularJS, but shifting more focus to React. Sass, HTML etc.</p>
-          </Point>
-          <Point>
-            <img src={server} alt="server" />
-            <h4>Backend</h4>
-            <p>Continuing use of JS across the stack, my language of choice is NodeJS. I have also spent time in PHP land. For Database; PostgreSQL, MySQL, MongoDB and RethinkDB.</p>
-          </Point>
-          <Point>
-            <img src={cloud} alt="cloud" />
-            <h4>DevOps</h4>
-            <p>Experience working with the major cloud provders including AWS, GCP and Digital Ocean.</p>
+            <h2>How It Works</h2>
+            <p>The Pause Anxiety app is a bot designed to respond to you when you start to feel anxious. Our goal is to prevent the attack, or reduce your stress level enough through distractions to get you to a safer space.</p>
+            <p>The app is integrated into Facebook Messenger, just head to the Facebook page and start chatting.</p>
           </Point>
         </Container>
       </Wrapper>
