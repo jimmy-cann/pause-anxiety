@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 
-import bgImg from './blog.png'
 import TopSection from '../TopSection/template'
 import BlogTile from '../BlogTile/template'
 import DarkFooter from '../DarkFooter/template'
@@ -10,7 +9,7 @@ import media from '../MediaQueries'
 import styled from 'styled-components'
 
 const tsProps = {
-  bgImg: bgImg,
+  // bgImg: bgImg,
   header: 'Dev Blog',
   logo: true,
   button: false,
@@ -46,7 +45,7 @@ class Blog extends Component {
       // frontmatter and content (actual markdown is loaded on '__content', frontmatter is right on root)
       const frontMatterMarkdown = webpackRequireContext(fileName)
       // remove cd and extension
-      fileName = fileName.match(/\.\/([^\.]+)\.*/)[1];
+      fileName = fileName.match(/\.\/([^.]+)\.*/)[1];
       // extract year and path
       let tokenizedFilename = fileName.match(/^(\d{4}-\d{2}-\d{2})(.*)/)
       if (!tokenizedFilename && !tokenizedFilename[1]) throw new Error('no ^YYYY-MM-DD date in blog filename')
@@ -63,12 +62,12 @@ class Blog extends Component {
               {'property': 'og:type', 'content': 'article'},
               {'property': 'og:title', 'content': meta.title},
               {'property': 'og:description', 'content': meta.description},
-              {'property': 'og:image', 'content': bgImg},
+              // {'property': 'og:image', 'content': bgImg},
               {'property': 'og:url', 'content': meta.url},
               {'property': 'twitter:card', 'content': 'article'},
               {'property': 'twitter:title', 'content': meta.title},
               {'property': 'twitter:description', 'content': meta.description},
-              {'property': 'twitter:image', 'content': bgImg},
+              // {'property': 'twitter:image', 'content': bgImg},
               {'property': 'twitter:url', 'content': meta.url}
             ]}
         />

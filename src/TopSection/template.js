@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Logo from './jc.png'
+// import Logo from './jc.png'
 import TopMenu from '../TopMenu/template'
 import BlueButton from '../BlueButton/template'
 import AngleDiv from '../components/AngleDiv/template'
