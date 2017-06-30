@@ -8,7 +8,6 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
   ${media.gtxs`
-    border-bottom: 1px solid #eaeaea;
   `}
 `
 

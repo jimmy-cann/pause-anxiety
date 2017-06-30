@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 
 import bgImg from './home.png'
 import TopSection from '../TopSection/template'
+
 import ThreePointCta from '../ThreePointCta/template'
 import DarkFooter from '../DarkFooter/template'
 
@@ -14,17 +15,17 @@ const Wrapper = styled.div`
 `;
 
 const meta = {
-  title: 'Jimmy Cann - Full Stack Developer',
-  description: 'Full Stack Developer from Melbourne, Australia. Japanese speaker. JavaScript enthusiast.',
-  url: 'https://jimmycann.com'
+  title: 'Pause Anxiety',
+  description: 'TBA',
+  url: 'https://pause-anxiety.com'
 }
 
 const tsProps = {
   bgImg: bgImg,
-  header: 'Jimmy Cann',
+  header: 'Pause Anxiety',
   logo: true,
   button: false,
-  subhead: 'Full Stack Developer'
+  subhead: 'Support to help you get through a hard time'
 }
 
 class Home extends Component {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import Logo from './logo.png'
 import SocialButtons from '../SocialButtons/template'
 import MobileMenu from '../MobileMenu/template'
 
@@ -11,7 +10,6 @@ const Wrapper = styled.div`
   max-width: 100%;
   height: 75px;
   background-color: transparent;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
 `
 
 const Container = styled.div`
@@ -43,7 +41,6 @@ const RightSection = styled.div`
     display: flex;
     width: 100%;
     text-align: right;
-    border-right: 1px solid rgba(255,255,255,0.15);
     > a {
       font-weight: 700;
       line-height: 75px;
@@ -82,9 +79,7 @@ const RightSectionMobile = styled.div`
       }
     }
   }
-  ${media.gtxs`
-    border-right: 1px solid rgba(255,255,255,0.15);
-  `}
+  ${media.gtxs``}
   ${media.gtsm`
     display: none;
   `}
@@ -112,9 +107,7 @@ class TopMenu extends Component {
       <Wrapper>
         <Container>
           <LeftSection>
-            <Link to="/">
-              <JimmyImg src={Logo} alt="Jimmy Cann" />
-            </Link>
+
           </LeftSection>
           <RightSection>
             <Link to="/blog">BLOG</Link>

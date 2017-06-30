@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Logo from './jc.png'
 import TopMenu from '../TopMenu/template'
 import BlueButton from '../BlueButton/template'
+import AngleDiv from '../components/AngleDiv/template'
 
 import media from '../MediaQueries'
 import styled from 'styled-components'
@@ -9,7 +10,6 @@ import styled from 'styled-components'
 const Inner = styled.div`
   max-width: 100%;
   min-height: 425px;
-  background-color: rgba(0,0,0,.5);
 `
 
 const Container = styled.div`
@@ -38,35 +38,24 @@ const Header = styled.h1`
   `}
 `
 
-const JimmyImg = styled.img`
-  max-height: 100px;
-  border-radius: 100%;
-  border: 2px solid;
-`
-
 class TopSection extends Component {
-
   render() {
-    let img, button
-    if (this.props.logo) img = <JimmyImg src={Logo} alt="Jimmy Cann" />
+    let button
     if (this.props.button) button = <BlueButton text="GET STARTED" link="/contact"></BlueButton>
     const Wrapper = styled.div`
       max-width: 100%;
       min-height: 425px;
-      background-image: url(${this.props.bgImg});
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
     `
     return (
       <Wrapper>
         <Inner>
           <TopMenu></TopMenu>
           <Container>
-            {img}
             <Header>{this.props.header}</Header>
             <p>{this.props.subhead}</p>
             {button}
+            <AngleDiv rotation="50"></AngleDiv>
+            <AngleDiv rotation="-15"></AngleDiv>
           </Container>
         </Inner>
       </Wrapper>
