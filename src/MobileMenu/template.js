@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 
-import media from '../MediaQueries'
+import media from '../services/MediaQueries'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
@@ -28,9 +28,9 @@ const Wrapper = styled.div`
   }
   &.slide {
     background-color: rgba(0,0,0,.1);
-    height: 50px;
+    height: 25px;
     animation-name: menuSlideIn;
-    animation-duration: .5s;
+    animation-duration: .2s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
     position: absolute;
@@ -43,13 +43,8 @@ class MobileMenu extends Component {
     return (
       <Wrapper className={this.props.slide}>
         <div>
-          <Link to="/marketplace">MARKETPLACE</Link>
-          <Link to="/integrate">INTEGRATE</Link>
-          <Link to="/media">MEDIA</Link>
-        </div>
-        <div>
+          <Link to="/about">ABOUT</Link>
           <Link to="/blog">BLOG</Link>
-          <Link to="/contact">CONTACT</Link>
         </div>
       </Wrapper>
     )
