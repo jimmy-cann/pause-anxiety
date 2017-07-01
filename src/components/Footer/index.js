@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import media from '../MediaQueries'
-import SocialButtons from '../SocialButtons/template'
+import media from '../../services/MediaQueries'
+import SocialButtons from '../../components/SocialButtons'
 
 const Wrapper = styled.div`
   max-width: 100%;
@@ -47,7 +47,7 @@ const Container = styled.div`
   }
 `
 
-class DarkFooter extends Component {
+class Footer extends Component {
   render() {
     const d = new Date().getFullYear()
     return (
@@ -63,4 +63,4 @@ class DarkFooter extends Component {
   }
 }
 
-export default DarkFooter
+export default Footer

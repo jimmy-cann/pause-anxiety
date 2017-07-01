@@ -2,9 +2,9 @@ import 'babel-polyfill'; // this is for < IE11
 import React, { Component } from 'react'
 import { Router, Route, browserHistory } from 'react-router'
 
-import Home from './Home/template'
-import Blog from './Blog/template'
-import BlogPage from './BlogPage/template'
+import Home from './routes/Home'
+import Blog from './routes/Blog'
+import BlogPage from './routes/BlogPage'
 
 class App extends Component {
   render() {

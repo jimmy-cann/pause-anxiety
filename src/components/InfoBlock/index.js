@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import media from '../../MediaQueries'
+import media from '../../services/MediaQueries'
 import styled from 'styled-components'
 
 const Point = styled.div`

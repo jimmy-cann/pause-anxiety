@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import SocialButtons from '../SocialButtons/template'
-import MobileMenu from '../MobileMenu/template'
+import SocialButtons from '../SocialButtons'
+import MobileMenu from '../MobileMenu'
 
-import media from '../MediaQueries'
+import media from '../../services/MediaQueries'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`

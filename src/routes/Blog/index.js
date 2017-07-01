@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 
-import TopSection from '../TopSection/template'
-import BlogTile from '../BlogTile/template'
-import DarkFooter from '../DarkFooter/template'
+import BlogTile from './BlogTile'
+import TopSection from '../../components/TopSection'
+import Footer from '../../components/Footer'
 
-import media from '../MediaQueries'
+import media from '../../services/MediaQueries'
 import styled from 'styled-components'
 
 const tsProps = {
@@ -79,7 +79,7 @@ class Blog extends Component {
         <Container>
           {[...blogs.keys()].map(path => (<BlogTile key={path} path={path} blog={blogs.get(path)}></BlogTile>))}
         </Container>
-        <DarkFooter></DarkFooter>
+        <Footer></Footer>
       </Wrapper>
     )
   }

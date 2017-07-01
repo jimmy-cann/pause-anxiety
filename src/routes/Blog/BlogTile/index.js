@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 
-import media from '../MediaQueries'
+import media from '../../../services/MediaQueries'
 import styled from 'styled-components'
 
 const TopWrap = styled.div`

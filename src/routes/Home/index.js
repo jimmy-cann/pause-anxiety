@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet';
 
-import TopSection from '../TopSection/template'
+import TopSection from '../../components/TopSection'
 
-import InfoBlock from '../components/InfoBlock'
-import DarkFooter from '../DarkFooter/template'
+import InfoBlock from '../../components/InfoBlock'
+import Footer from '../../components/Footer'
 
 import styled from 'styled-components'
 
@@ -81,7 +81,7 @@ class Home extends Component {
         }) }
         <InfoBlock justify="center"
                    heading="See Pause Anxiety In Action"></InfoBlock>
-        <DarkFooter></DarkFooter>
+        <Footer></Footer>
       </Wrapper>
     )
   }

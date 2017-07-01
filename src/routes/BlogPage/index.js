@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'react-router'
 import Helmet from 'react-helmet'
 
-import TopSection from '../TopSection/template'
-import DarkFooter from '../DarkFooter/template'
+import TopSection from '../../components/TopSection'
+import Footer from '../../components/Footer'
 
 import styled from 'styled-components'
 
@@ -70,7 +70,7 @@ class BlogPage extends Component {
           <br/><br/>
           <span>Originally posted on {new Date(postDate).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} by {blog.author}</span>
         </Container>
-        <DarkFooter></DarkFooter>
+        <Footer></Footer>
       </Wrapper>
     )
   }

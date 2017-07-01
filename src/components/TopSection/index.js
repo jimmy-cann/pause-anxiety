@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 // import Logo from './jc.png'
-import TopMenu from '../TopMenu/template'
-import BlueButton from '../components/BlueButton'
-import AngleDiv from '../components/AngleDiv'
+import TopMenu from '../TopMenu'
+import BlueButton from '../BlueButton'
+import AngleDiv from '../AngleDiv'
 
-import media from '../MediaQueries'
+import media from '../../services/MediaQueries'
 import styled from 'styled-components'
 
 const Inner = styled.div`
