@@ -10,10 +10,10 @@ import styled from 'styled-components'
 
 const tsProps = {
   // bgImg: bgImg,
-  header: 'Dev Blog',
+  header: 'Pause Anxiety Blog',
   logo: true,
   button: false,
-  subhead: 'Obligatory repository of code ideas and guides'
+  subhead: 'News and Guides for getting you through the dark times'
 }
 
 const Wrapper = styled.div`
@@ -77,11 +77,7 @@ class Blog extends Component {
                     button={tsProps.button}
                     subhead={tsProps.subhead}></TopSection>
         <Container>
-          {[...blogs.keys()].map(path => {
-            return (
-              <BlogTile key={path} path={path} blog={blogs.get(path)}></BlogTile>
-            )
-          })}
+          {[...blogs.keys()].map(path => (<BlogTile key={path} path={path} blog={blogs.get(path)}></BlogTile>))}
         </Container>
         <DarkFooter></DarkFooter>
       </Wrapper>

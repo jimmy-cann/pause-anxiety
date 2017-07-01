@@ -44,7 +44,6 @@ const Button = styled.button`
     text-decoration: none;
   }
 `
-
 class BlueButton extends Component {
   render() {
     return (

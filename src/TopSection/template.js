@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 // import Logo from './jc.png'
 import TopMenu from '../TopMenu/template'
-import BlueButton from '../BlueButton/template'
-import AngleDiv from '../components/AngleDiv/template'
+import BlueButton from '../components/BlueButton'
+import AngleDiv from '../components/AngleDiv'
 
 import media from '../MediaQueries'
 import styled from 'styled-components'
@@ -40,8 +40,6 @@ const Header = styled.h1`
 
 class TopSection extends Component {
   render() {
-    let button
-    if (this.props.button) button = <BlueButton text="GET STARTED" link="/contact"></BlueButton>
     const Wrapper = styled.div`
       max-width: 100%;
       min-height: 425px;
@@ -53,7 +51,7 @@ class TopSection extends Component {
           <Container>
             <Header>{this.props.header}</Header>
             <p>{this.props.subhead}</p>
-            {button}
+            { this.props.button ? <BlueButton text="GET STARTED" link="/contact"></BlueButton> : null }
             <AngleDiv rotation="50"></AngleDiv>
             <AngleDiv rotation="-15"></AngleDiv>
           </Container>

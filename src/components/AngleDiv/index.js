@@ -6,12 +6,12 @@ class AngleDiv extends Component {
   render() {
     console.log(this.props)
     const Wrapper = styled.div`
-      min-height: 770px;
+      min-height: 800px;
       width: 250%;
       position: absolute;
       background-color: rgba(33, 150, 243, 0.5);
-      top: -50%;
-      left: -50%;
+      top: -500px;
+      left: -700px;
       transform: rotate(${this.props.rotation}deg);
       z-index: -1;
     `;

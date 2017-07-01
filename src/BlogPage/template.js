@@ -31,6 +31,7 @@ const LinkWrap = styled.div`
 
 class BlogPage extends Component {
   render() {
+    console.log(this.props.params)
     const postDate = this.props.params.year + '-' + this.props.params.month + '-' + this.props.params.day
     const postRoute = postDate + '-' + this.props.params.slug
     const blog = require('markdown-with-front-matter!../_posts/' + postRoute + '.md')
@@ -69,7 +70,8 @@ class BlogPage extends Component {
         </LinkWrap>
         <Container>
           <div className='markdown-body' dangerouslySetInnerHTML={{__html: blog.__content}}></div>
-          <span>Originally posted on {new Date(postDate).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          <br/><br/>
+          <span>Originally posted on {new Date(postDate).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })} by {blog.author}</span>
         </Container>
         <DarkFooter></DarkFooter>
       </Wrapper>
