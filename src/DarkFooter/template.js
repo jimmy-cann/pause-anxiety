@@ -7,6 +7,10 @@ import SocialButtons from '../SocialButtons/template'
 const Wrapper = styled.div`
   max-width: 100%;
   background-color: #000;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
 `
 
 const Container = styled.div`
