@@ -7,11 +7,19 @@ import InfoBlock from '../../components/InfoBlock'
 import Footer from '../../components/Footer'
 
 import styled from 'styled-components'
+import ReactPlayer from 'react-player'
 
 const Wrapper = styled.div`
   min-height: 1000px;
   min-height: calc(100vh - 500px);
   margin-bottom: 130px;
+`;
+
+const VideoWrapper = styled.div`
+  > div {
+    margin: 0 auto;
+    height: 100%!important;
+  }
 `;
 
 const meta = {
@@ -80,7 +88,11 @@ class Home extends Component {
           )
         }) }
         <InfoBlock justify="center"
-                   heading="See Pause Anxiety In Action"></InfoBlock>
+                   heading="See Pause Anxiety In Action">
+        </InfoBlock>
+        <VideoWrapper>
+          <ReactPlayer url='https://www.facebook.com/pause.anxiety/videos/247619069063674/' />
+        </VideoWrapper>
         <Footer></Footer>
       </Wrapper>
     )
