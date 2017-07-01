@@ -16,7 +16,7 @@ class AngleDiv extends Component {
       transform: rotate(${this.props.rotation}deg);
       z-index: -1;
       ${media.xs`
-        left: -500px;
+        left: -400px;
       `}
     `;
     return (

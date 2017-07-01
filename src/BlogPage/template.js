@@ -65,9 +65,6 @@ class BlogPage extends Component {
                     logo={tsProps.logo}
                     button={tsProps.button}
                     subhead={tsProps.subhead}></TopSection>
-        <LinkWrap>
-          <Link to="/blog">&#171; Back to Blog</Link>
-        </LinkWrap>
         <Container>
           <div className='markdown-body' dangerouslySetInnerHTML={{__html: blog.__content}}></div>
           <br/><br/>

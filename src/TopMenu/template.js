@@ -33,6 +33,16 @@ const Container = styled.div`
 
 const LeftSection = styled.div`
   width: 100%;
+  > a {
+    font-weight: 700;
+    line-height: 75px;
+    text-decoration: none;
+    color: #fff;
+    padding: 0 20px;
+    &:hover {
+      color: #2196f3;
+    }
+  }
 `
 
 const RightSection = styled.div`
@@ -47,12 +57,12 @@ const RightSection = styled.div`
       text-decoration: none;
       color: #fff;
       padding: 0 20px;
-    }
-    > a:first-child {
-      margin-left: auto;
-    }
-    > a:hover {
-      color: #2196f3;
+      &:first-child {
+        margin-left: auto;
+      }
+      &:hover {
+        color: #2196f3;
+      }
     }
   `}
 `
@@ -102,7 +112,7 @@ class TopMenu extends Component {
       <Wrapper>
         <Container>
           <LeftSection>
-
+            <Link to="/">HOME</Link>
           </LeftSection>
           <RightSection>
             <Link to="/blog">BLOG</Link>

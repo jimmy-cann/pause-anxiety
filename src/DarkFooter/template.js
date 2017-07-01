@@ -30,6 +30,9 @@ const Container = styled.div`
       ${media.gtxs`
         text-align: left;
       `}
+      > a {
+        color: #fff;
+      }
     }
   }
   > div:nth-child(2) {
@@ -47,7 +50,7 @@ class DarkFooter extends Component {
       <Wrapper>
         <Container>
           <div>
-            <p>&copy; {d} <a href="https://pause-anxiety.com">Pause Anxiety</a>. Code&nbsp;samples&nbsp;licensed&nbsp;under&nbsp;<a href="https://opensource.org/licenses/mit-license.php">MIT</a></p>
+            <p>&copy; {d} - <a href="https://pause-anxiety.com">Pause Anxiety</a></p>
           </div>
           <SocialButtons></SocialButtons>
         </Container>
