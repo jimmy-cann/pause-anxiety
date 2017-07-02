@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import Helmet from 'react-helmet';
 
 import TopSection from '../../components/TopSection'
-
 import InfoBlock from '../../components/InfoBlock'
+import BlueButton from '../../components/BlueButton'
 import Footer from '../../components/Footer'
 
 import styled from 'styled-components'
@@ -22,6 +22,11 @@ const VideoWrapper = styled.div`
   }
 `;
 
+const ButtonWrapper = styled.div`
+  text-align: center;
+  padding 40px;
+`;
+
 const meta = {
   title: 'Pause Anxiety',
   description: 'TBA',
@@ -31,28 +36,36 @@ const meta = {
 const tsProps = {
   // bgImg: bgImg,
   header: 'Pause Anxiety',
-  logo: true,
-  button: false,
+  logo: false,
+  button: true,
   subhead: 'Support to help you get through a hard time'
 }
 
 const contentBlocks = [{
-  heading: 'How It Works',
+  heading: 'What is Pause Anxiety?',
   content: [
-    'The Pause Anxiety app is a bot designed to respond to you when you start to feel anxious. Our goal is to prevent the attack, or reduce your stress level enough through distractions to get you to a safer space.',
+    'The Pause Anxiety app is designed to help with the feelings and thoughts that come with an anxiety attack.',
+    'The app works by helping to not only identify the feelings you are having but also offer strategies to help cope during an anxiety attack through the use of conversation and distraction.',
     'The app is integrated into Facebook Messenger, just head to the Facebook page and start chatting.'
+  ]
+}, {
+  heading: 'Increase Your Confidence',
+  content: [
+    'Talking to Pause Anxiety during an anxiety attack will show you that you are strong enough to get through difficult situations, you once thought you could not face.',
+    'Every time you get through an anxiety episode you will become stronger and more confident.'
   ]
 }, {
   heading: 'Anonymous Support',
   content: [
+    'Pause Anxiety is always available to help and support you during an anxiety attack. The app is discreet and looks just a message with a friend.',
     'Talking to a real person can sometimes induce more stress than what is necessary. Pause Anxiety is not a real person. Unlike the support bot at your telco, we believe this may be quite a benefit.',
     'Pause Anxiety is always available to you to help. No matter the location, no matter the time, Pause Anxiety will support you because it never rests.'
   ]
 }, {
   heading: 'Easy Interaction',
   content: [
-    'You can talk as little or as much as you need with Pause Anxiety, it won\'t be offended if you need to stop.',
-    'Certain words will produce encouragement or explanation to help relax your fears. Distraction games will try to bring your stress level down.'
+    'Pause Anxiety is simple to use and you can interact with it as you like. Pause Anxiety will respond with a single word or can offer a long conversation depending on your needs.',
+    'Certain words will produce encouragement or explanation to help ease your fears while distraction games will try to bring your stress level down.'
   ]
 }]
 
@@ -80,19 +93,20 @@ class Home extends Component {
                     logo={tsProps.logo}
                     button={tsProps.button}
                     subhead={tsProps.subhead}></TopSection>
-        { contentBlocks.map((block, index) => {
-          return (
+        { contentBlocks.map((block, index) => (
             <InfoBlock justify={ index % 2 === 0 ? 'flex-start' : 'flex-end' }
                        heading={ block.heading }
                        content={ block.content }></InfoBlock>
-          )
-        }) }
+        )) }
         <InfoBlock justify="center"
                    heading="See Pause Anxiety In Action">
         </InfoBlock>
         <VideoWrapper>
           <ReactPlayer url='https://www.facebook.com/pause.anxiety/videos/247619069063674/' />
         </VideoWrapper>
+        <ButtonWrapper>
+          <BlueButton text="START CHATTING" link="https://www.facebook.com/pause.anxiety"></BlueButton>
+        </ButtonWrapper>
         <Footer></Footer>
       </Wrapper>
     )

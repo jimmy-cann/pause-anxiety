@@ -112,7 +112,7 @@ class TopMenu extends Component {
       <Wrapper>
         <Container>
           <LeftSection>
-            <Link to="/">HOME</Link>
+            <Link to="/">PAUSE ANXIETY</Link>
           </LeftSection>
           <RightSection>
             <Link to="/blog">BLOG</Link>

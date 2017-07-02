@@ -51,7 +51,7 @@ class TopSection extends Component {
           <Container>
             <Header>{this.props.header}</Header>
             <p>{this.props.subhead}</p>
-            { this.props.button ? <BlueButton text="GET STARTED" link="/contact"></BlueButton> : null }
+            { this.props.button ? <BlueButton text="START CHATTING" link="https://www.facebook.com/pause.anxiety"></BlueButton> : null }
             <AngleDiv rotation="60"></AngleDiv>
             <AngleDiv rotation="-15"></AngleDiv>
           </Container>
