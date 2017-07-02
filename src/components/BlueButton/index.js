@@ -47,7 +47,7 @@ const Button = styled.button`
 class BlueButton extends Component {
   render() {
     return (
-      <Link to={this.props.link}>
+      <Link to={this.props.link} target="_blank">
         <Button>
           {this.props.text}
         </Button>
