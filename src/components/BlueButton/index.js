@@ -3,6 +3,20 @@ import { Link } from 'react-router'
 
 import styled from 'styled-components'
 
+class BlueButton extends Component {
+  render() {
+    return (
+      <Link to={this.props.link} target="_blank">
+        <Button>
+          {this.props.text}
+        </Button>
+      </Link>
+    );
+  }
+}
+
+export default BlueButton;
+
 const Button = styled.button`
   display: inline-block;
   position: relative;
@@ -44,16 +58,3 @@ const Button = styled.button`
     text-decoration: none;
   }
 `
-class BlueButton extends Component {
-  render() {
-    return (
-      <Link to={this.props.link} target="_blank">
-        <Button>
-          {this.props.text}
-        </Button>
-      </Link>
-    );
-  }
-}
-
-export default BlueButton;

@@ -7,6 +7,31 @@ import AngleDiv from '../AngleDiv'
 import media from '../../services/MediaQueries'
 import styled from 'styled-components'
 
+class TopSection extends Component {
+  render() {
+    const Wrapper = styled.div`
+      max-width: 100%;
+      min-height: 425px;
+    `
+    return (
+      <Wrapper>
+        <Inner>
+          <TopMenu></TopMenu>
+          <Container>
+            <Header>{this.props.header}</Header>
+            <p>{this.props.subhead}</p>
+            { this.props.button ? <BlueButton text="START CHATTING" link="https://www.facebook.com/pause.anxiety"></BlueButton> : null }
+            <AngleDiv rotation="60"></AngleDiv>
+            <AngleDiv rotation="-15"></AngleDiv>
+          </Container>
+        </Inner>
+      </Wrapper>
+    )
+  }
+}
+
+export default TopSection
+
 const Inner = styled.div`
   max-width: 100%;
   min-height: 425px;
@@ -37,28 +62,3 @@ const Header = styled.h1`
     font-size: 3em;
   `}
 `
-
-class TopSection extends Component {
-  render() {
-    const Wrapper = styled.div`
-      max-width: 100%;
-      min-height: 425px;
-    `
-    return (
-      <Wrapper>
-        <Inner>
-          <TopMenu></TopMenu>
-          <Container>
-            <Header>{this.props.header}</Header>
-            <p>{this.props.subhead}</p>
-            { this.props.button ? <BlueButton text="START CHATTING" link="https://www.facebook.com/pause.anxiety"></BlueButton> : null }
-            <AngleDiv rotation="60"></AngleDiv>
-            <AngleDiv rotation="-15"></AngleDiv>
-          </Container>
-        </Inner>
-      </Wrapper>
-    )
-  }
-}
-
-export default TopSection

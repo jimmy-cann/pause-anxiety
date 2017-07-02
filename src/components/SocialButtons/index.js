@@ -2,26 +2,6 @@ import React, { Component } from 'react';
 
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
-  text-align: center;
-  display: flex;
-  padding: 0 20px;
-`;
-
-const SocialLink = styled.a`
-  padding: 22.5px 10px 0;
-  cursor: pointer;
-  &:hover {
-    fill: #2196f3;
-    > svg {
-      fill: inherit;
-      > g {
-       fill: inherit;
-      }
-    }
-  }
-`;
-
 class SocialButtons extends Component {
   render() {
     return (
@@ -53,3 +33,23 @@ class SocialButtons extends Component {
 }
 
 export default SocialButtons;
+
+const Wrapper = styled.div`
+  text-align: center;
+  display: flex;
+  padding: 0 20px;
+`
+
+const SocialLink = styled.a`
+  padding: 22.5px 10px 0;
+  cursor: pointer;
+  &:hover {
+    fill: #2196f3;
+    > svg {
+      fill: inherit;
+      > g {
+       fill: inherit;
+      }
+    }
+  }
+`

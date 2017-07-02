@@ -4,6 +4,21 @@ import { Link } from 'react-router'
 import media from '../../services/MediaQueries'
 import styled from 'styled-components'
 
+class MobileMenu extends Component {
+  render() {
+    return (
+      <Wrapper className={this.props.slide}>
+        <div>
+          <Link to="/about">ABOUT</Link>
+          <Link to="/blog">BLOG</Link>
+        </div>
+      </Wrapper>
+    )
+  }
+}
+
+export default MobileMenu
+
 const Wrapper = styled.div`
   width: 100%;
   height: 25px;
@@ -37,18 +52,3 @@ const Wrapper = styled.div`
     right: 0;
   }
 `
-
-class MobileMenu extends Component {
-  render() {
-    return (
-      <Wrapper className={this.props.slide}>
-        <div>
-          <Link to="/about">ABOUT</Link>
-          <Link to="/blog">BLOG</Link>
-        </div>
-      </Wrapper>
-    )
-  }
-}
-
-export default MobileMenu

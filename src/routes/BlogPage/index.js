@@ -6,19 +6,6 @@ import Footer from '../../components/Footer'
 
 import styled from 'styled-components'
 
-const Wrapper = styled.div`
-  max-width: 100%;
-  > a {
-    margin: 10px;
-  }
-`
-
-const Container = styled.div`
-  max-width: 700px;
-  padding: 10px 40px 40px;
-  margin: 0 auto;
-`
-
 class BlogPage extends Component {
   render() {
     const postDate = this.props.params.year + '-' + this.props.params.month + '-' + this.props.params.day
@@ -66,3 +53,16 @@ class BlogPage extends Component {
 }
 
 export default BlogPage
+
+const Wrapper = styled.div`
+  max-width: 100%;
+  > a {
+    margin: 10px;
+  }
+`
+
+const Container = styled.div`
+  max-width: 700px;
+  padding: 10px 40px 40px;
+  margin: 0 auto;
+`

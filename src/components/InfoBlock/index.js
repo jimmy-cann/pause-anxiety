@@ -4,33 +4,6 @@ import media from '../../services/MediaQueries'
 import shortid from 'shortid'
 import styled from 'styled-components'
 
-const Point = styled.div`
-  width: 100%;
-  text-align: left;
-  padding: 0 0 20px;
-  ${media.gtxs`
-    padding: 0 40px 10px;
-    max-width: 50%;
-  `}
-  ${media.gtsm`
-    max-width: 40%;
-  `}
-  > h2 {
-    margin: 10px 0;
-  }
-  > p {
-    margin-top: 0;
-  }
-  > div {
-    padding-top: 0;
-    padding-bottom: 20px;
-    > a {
-      max-width: 100px;
-      margin: 0 auto;
-    }
-  }
-`
-
 class InfoBlock extends Component {
   render() {
     const Container = styled.div`
@@ -58,3 +31,30 @@ class InfoBlock extends Component {
 }
 
 export default InfoBlock
+
+const Point = styled.div`
+  width: 100%;
+  text-align: left;
+  padding: 0 0 20px;
+  ${media.gtxs`
+    padding: 0 40px 10px;
+    max-width: 50%;
+  `}
+  ${media.gtsm`
+    max-width: 40%;
+  `}
+  > h2 {
+    margin: 10px 0;
+  }
+  > p {
+    margin-top: 0;
+  }
+  > div {
+    padding-top: 0;
+    padding-bottom: 20px;
+    > a {
+      max-width: 100px;
+      margin: 0 auto;
+    }
+  }
+`

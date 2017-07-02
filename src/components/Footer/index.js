@@ -4,6 +4,24 @@ import styled from 'styled-components'
 import media from '../../services/MediaQueries'
 import SocialButtons from '../../components/SocialButtons'
 
+class Footer extends Component {
+  render() {
+    const d = new Date().getFullYear()
+    return (
+      <Wrapper>
+        <Container>
+          <div>
+            <p>&copy; {d} - <a href="https://pause-anxiety.com">Pause Anxiety</a></p>
+          </div>
+          <SocialButtons></SocialButtons>
+        </Container>
+      </Wrapper>
+    );
+  }
+}
+
+export default Footer
+
 const Wrapper = styled.div`
   max-width: 100%;
   background-color: #000;
@@ -46,21 +64,3 @@ const Container = styled.div`
     `}
   }
 `
-
-class Footer extends Component {
-  render() {
-    const d = new Date().getFullYear()
-    return (
-      <Wrapper>
-        <Container>
-          <div>
-            <p>&copy; {d} - <a href="https://pause-anxiety.com">Pause Anxiety</a></p>
-          </div>
-          <SocialButtons></SocialButtons>
-        </Container>
-      </Wrapper>
-    );
-  }
-}
-
-export default Footer

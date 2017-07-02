@@ -4,23 +4,6 @@ import { Link } from 'react-router'
 import media from '../../../services/MediaQueries'
 import styled from 'styled-components'
 
-const TopWrap = styled.div`
-  background-color: rgba(0,0,0,.666);
-  color: #fff;
-  padding: 10px 20px;
-`
-
-const Header = styled.h2`
-  text-align: left;
-  margin-bottom: 0;
-  font-weight: 500;
-  line-height: normal;
-`
-
-const Author = styled.h5`
-  font-weight: 400;
-`
-
 class BlogTile extends Component {
   render() {
     const image = this.props.blog.image || '/img/blog.png'
@@ -54,3 +37,20 @@ class BlogTile extends Component {
 }
 
 export default BlogTile
+
+const TopWrap = styled.div`
+  background-color: rgba(0,0,0,.666);
+  color: #fff;
+  padding: 10px 20px;
+`
+
+const Header = styled.h2`
+  text-align: left;
+  margin-bottom: 0;
+  font-weight: 500;
+  line-height: normal;
+`
+
+const Author = styled.h5`
+  font-weight: 400;
+`

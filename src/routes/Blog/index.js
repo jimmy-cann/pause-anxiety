@@ -8,36 +8,6 @@ import Footer from '../../components/Footer'
 import media from '../../services/MediaQueries'
 import styled from 'styled-components'
 
-const tsProps = {
-  // bgImg: bgImg,
-  header: 'Pause Anxiety Blog',
-  logo: true,
-  button: false,
-  subhead: 'News and Guides for getting you through the dark times'
-}
-
-const Wrapper = styled.div`
-  max-width: 100%;
-`
-
-const Container = styled.div`
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 5px 10px;
-  ${media.sm`
-    padding: 10px 20px;
-  `}
-  ${media.gtsm`
-    padding: 20px 40px;
-  `}
-`
-
-const meta = {
-  title: 'Blog - Pause Anxiety',
-  description: 'Dev Blog - Obligatory repository of code ideas and guides',
-  url: 'https://pause-anxiety.com/blog'
-}
-
 class Blog extends Component {
   render() {
     const webpackRequireContext = require.context('markdown-with-front-matter!../_posts', false, /\.md$/)
@@ -88,3 +58,33 @@ class Blog extends Component {
 }
 
 export default Blog
+
+const tsProps = {
+  // bgImg: bgImg,
+  header: 'Pause Anxiety Blog',
+  logo: true,
+  button: false,
+  subhead: 'News and Guides for getting you through the dark times'
+}
+
+const Wrapper = styled.div`
+  max-width: 100%;
+`
+
+const Container = styled.div`
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 5px 10px;
+  ${media.sm`
+    padding: 10px 20px;
+  `}
+  ${media.gtsm`
+    padding: 20px 40px;
+  `}
+`
+
+const meta = {
+  title: 'Blog - Pause Anxiety',
+  description: 'Dev Blog - Obligatory repository of code ideas and guides',
+  url: 'https://pause-anxiety.com/blog'
+}

@@ -17,7 +17,7 @@ class AngleDiv extends Component {
       ${media.xs`
         left: -400px;
       `}
-    `;
+    `
     return (
       <Wrapper></Wrapper>
     )

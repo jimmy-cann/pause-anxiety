@@ -6,6 +6,48 @@ import MobileMenu from '../MobileMenu'
 import media from '../../services/MediaQueries'
 import styled from 'styled-components'
 
+class TopMenu extends Component {
+  constructor() {
+    super()
+    this.state = {
+      slide: ''
+    }
+  }
+  slideToggle() {
+    let slide = ''
+    if (!this.state.slide) slide = 'slide'
+    this.setState({ slide: slide })
+  }
+  render() {
+    return (
+      <Wrapper>
+        <Container>
+          <LeftSection>
+            <Link to="/">PAUSE ANXIETY</Link>
+          </LeftSection>
+          <RightSection>
+            <Link to="/about">ABOUT</Link>
+            <Link to="/blog">BLOG</Link>
+          </RightSection>
+          <RightSectionMobile>
+            <div onClick={this.slideToggle.bind(this)}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                  <g fill="#FFF">
+                    <path d="M3 18h18v-2H3v2z"/><path d="M3 13h18v-2H3v2z"/><path d="M3 6v2h18V6H3z"/>
+                  </g>
+              </svg>
+            </div>
+          </RightSectionMobile>
+          <SocialButtons></SocialButtons>
+        </Container>
+        <MobileMenu slide={this.state.slide}></MobileMenu>
+      </Wrapper>
+    )
+  }
+}
+
+export default TopMenu
+
 const Wrapper = styled.div`
   max-width: 100%;
   height: 75px;
@@ -94,45 +136,3 @@ const RightSectionMobile = styled.div`
     display: none;
   `}
 `
-
-class TopMenu extends Component {
-  constructor() {
-    super()
-    this.state = {
-      slide: ''
-    }
-  }
-  slideToggle() {
-    let slide = ''
-    if (!this.state.slide) slide = 'slide'
-    this.setState({ slide: slide })
-  }
-  render() {
-    return (
-      <Wrapper>
-        <Container>
-          <LeftSection>
-            <Link to="/">PAUSE ANXIETY</Link>
-          </LeftSection>
-          <RightSection>
-            <Link to="/about">ABOUT</Link>
-            <Link to="/blog">BLOG</Link>
-          </RightSection>
-          <RightSectionMobile>
-            <div onClick={this.slideToggle.bind(this)}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
-                  <g fill="#FFF">
-                    <path d="M3 18h18v-2H3v2z"/><path d="M3 13h18v-2H3v2z"/><path d="M3 6v2h18V6H3z"/>
-                  </g>
-              </svg>
-            </div>
-          </RightSectionMobile>
-          <SocialButtons></SocialButtons>
-        </Container>
-        <MobileMenu slide={this.state.slide}></MobileMenu>
-      </Wrapper>
-    )
-  }
-}
-
-export default TopMenu
