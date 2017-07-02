@@ -115,6 +115,7 @@ class TopMenu extends Component {
             <Link to="/">PAUSE ANXIETY</Link>
           </LeftSection>
           <RightSection>
+            <Link to="/about">ABOUT</Link>
             <Link to="/blog">BLOG</Link>
           </RightSection>
           <RightSectionMobile>
