@@ -7,6 +7,7 @@ import BlueButton from '../../components/BlueButton'
 import Footer from '../../components/Footer'
 
 import styled from 'styled-components'
+import shortid from 'shortid'
 import ReactPlayer from 'react-player'
 
 const Wrapper = styled.div`
@@ -94,7 +95,8 @@ class Home extends Component {
                     button={tsProps.button}
                     subhead={tsProps.subhead}></TopSection>
         { contentBlocks.map((block, index) => (
-            <InfoBlock justify={ index % 2 === 0 ? 'flex-start' : 'flex-end' }
+            <InfoBlock key={ shortid.generate() }
+                       justify={ index % 2 === 0 ? 'flex-start' : 'flex-end' }
                        heading={ block.heading }
                        content={ block.content }></InfoBlock>
         )) }

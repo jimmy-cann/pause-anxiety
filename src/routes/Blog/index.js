@@ -77,7 +77,9 @@ class Blog extends Component {
                     button={tsProps.button}
                     subhead={tsProps.subhead}></TopSection>
         <Container>
-          {[...blogs.keys()].map(path => (<BlogTile key={path} path={path} blog={blogs.get(path)}></BlogTile>))}
+          { [...blogs.keys()].map(path => (
+            <BlogTile key={path} path={path} blog={blogs.get(path)}></BlogTile>
+          )) }
         </Container>
         <Footer></Footer>
       </Wrapper>

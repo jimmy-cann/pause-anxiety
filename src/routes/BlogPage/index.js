@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
 import Helmet from 'react-helmet'
 
 import TopSection from '../../components/TopSection'
@@ -20,18 +19,8 @@ const Container = styled.div`
   margin: 0 auto;
 `
 
-const LinkWrap = styled.div`
-  position: absolute;
-  top: 85px;
-  left: 15px;
-  > a {
-    color: #fff;
-  }
-`
-
 class BlogPage extends Component {
   render() {
-    console.log(this.props.params)
     const postDate = this.props.params.year + '-' + this.props.params.month + '-' + this.props.params.day
     const postRoute = postDate + '-' + this.props.params.slug
     const blog = require('markdown-with-front-matter!../_posts/' + postRoute + '.md')

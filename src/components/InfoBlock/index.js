@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import media from '../../services/MediaQueries'
+import shortid from 'shortid'
 import styled from 'styled-components'
 
 const Point = styled.div`
@@ -49,7 +50,7 @@ class InfoBlock extends Component {
       <Container>
         <Point>
           <h2>{this.props.heading}</h2>
-          { content.map(para => (<p>{para}</p>)) }
+          { content.map(para => (<p key={ shortid.generate() }>{para}</p>)) }
         </Point>
       </Container>
     )

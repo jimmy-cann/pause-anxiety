@@ -6,6 +6,7 @@ import InfoBlock from '../../components/InfoBlock'
 import BlueButton from '../../components/BlueButton'
 import Footer from '../../components/Footer'
 
+import shortid from 'shortid'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
@@ -87,7 +88,8 @@ class About extends Component {
                     button={tsProps.button}
                     subhead={tsProps.subhead}></TopSection>
         { contentBlocks.map((block, index) => (
-            <InfoBlock justify={ index % 2 === 0 ? 'flex-start' : 'flex-end' }
+            <InfoBlock key={ shortid.generate() }
+                       justify={ index % 2 === 0 ? 'flex-start' : 'flex-end' }
                        heading={ block.heading }
                        content={ block.content }></InfoBlock>
         )) }
@@ -96,7 +98,8 @@ class About extends Component {
         </ButtonWrapper>
         <AboutAuthorsHead>About the Authors</AboutAuthorsHead>
         { aboutAuthors.map((block, index) => (
-            <InfoBlock justify={ index % 2 === 0 ? 'flex-start' : 'flex-end' }
+            <InfoBlock key={ shortid.generate() }
+                       justify={ index % 2 === 0 ? 'flex-start' : 'flex-end' }
                        heading={ block.heading }
                        content={ block.content }></InfoBlock>
         )) }

@@ -23,7 +23,6 @@ const Author = styled.h5`
 
 class BlogTile extends Component {
   render() {
-    console.log(this.props)
     const image = this.props.blog.image || '/img/blog.png'
     const Wrapper = styled.div`
       background-image: url(${image});

@@ -5,7 +5,6 @@ import styled from 'styled-components'
 
 class AngleDiv extends Component {
   render() {
-    console.log(this.props)
     const Wrapper = styled.div`
       min-height: 800px;
       width: 250%;
