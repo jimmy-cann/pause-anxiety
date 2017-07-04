@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import Logo from './pal.png'
 import SocialButtons from '../SocialButtons'
 import MobileMenu from '../MobileMenu'
 
@@ -23,7 +24,7 @@ class TopMenu extends Component {
       <Wrapper>
         <Container>
           <LeftSection>
-            <Link to="/">PAUSE ANXIETY</Link>
+            <Link to="/"><TopLogo src={Logo} alt="circle-logo"/></Link>
           </LeftSection>
           <RightSection>
             <Link to="/about">ABOUT</Link>
@@ -75,16 +76,6 @@ const Container = styled.div`
 
 const LeftSection = styled.div`
   width: 100%;
-  > a {
-    font-weight: 700;
-    line-height: 75px;
-    text-decoration: none;
-    color: #fff;
-    padding: 0 20px;
-    &:hover {
-      color: #2196f3;
-    }
-  }
 `
 
 const RightSection = styled.div`
@@ -135,4 +126,9 @@ const RightSectionMobile = styled.div`
   ${media.gtsm`
     display: none;
   `}
+`
+
+const TopLogo = styled.img`
+  max-width: 30px;
+  padding: 20px;
 `
