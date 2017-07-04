@@ -16,6 +16,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   min-height: 1700px;
+  color: #423091;
 }
 
 ::selection {
